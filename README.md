@@ -3,7 +3,7 @@ Workaround for Synology DSM 7 missing S.M.A.R.T info.
 
 ### Build
 ```
-go build -trimpath -ldflags '-s -w'
+CGO_ENABLED=0 go build -trimpath -ldflags '-s -w'
 ```
 Copy the binary to your Synology NAS and use it from SSH.
 
